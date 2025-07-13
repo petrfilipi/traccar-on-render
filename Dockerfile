@@ -1,7 +1,4 @@
-FROM traccar/traccar:latest
+ENV PORT=8082
+EXPOSE 8082
 
-ENV TRACCAR_PORT=8080
-ENV TRACCAR_HTTPS_PORT=0
-ENV TRACCAR_BIND_ADDRESS=0.0.0.0
-
-EXPOSE 8080 5027
+CMD ["sh", "-c", "java -jar /opt/traccar/lib/traccar.jar --server.port=$PORT"]
