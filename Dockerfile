@@ -1,4 +1,2 @@
-ENV PORT=8082
+FROM traccar/traccar:latest
 EXPOSE 8082
-
-CMD ["sh", "-c", "java -jar /opt/traccar/lib/traccar.jar --server.port=$PORT"]
